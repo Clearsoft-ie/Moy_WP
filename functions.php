@@ -47,12 +47,16 @@ if ( ! function_exists( 'Moy_setup' ) ) {
 		add_theme_support( 'title-tag' );
 
 				//add CSS
-		add_editor_style('/assets/plugins/bootstrap/css/bootstrap.min.css');
-		add_editor_style('/assets/css/essentials.css');
-		add_editor_style('/assets/css/layout.css');
-		add_editor_style('/assets/css/header-1.css');
-		add_editor_style('/assets/css/color_scheme/orange.css');
-		add_editor_style('/assets/css/cocoen.min.css');
+        add_editor_style('/assets/plugins/magnific-popup/magnific-popup.css');
+        add_editor_style('/assets/plugins/rs-plugin-5/css/settings.css');
+        add_editor_style('/assets/plugins/rs-plugin-5/css/layers.css');
+        add_editor_style('/assets/plugins/rs-plugin-5/css/navigation.css');
+        add_editor_style('/assets/css/animations.css');
+        add_editor_style('/assets/plugins/slick/slick.css');
+        add_editor_style('/assets/css/style.css');
+        add_editor_style('/assets/css/typography-default.css');
+        add_editor_style('/assets/css/skins/MoyBlue.css');
+        add_editor_style('/assets/css/custom.css');
 
 		// Add nav menu
 		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'Moy' ) );

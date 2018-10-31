@@ -10,11 +10,9 @@ get_header(); ?>
 ?>
 
 <form role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url('/'); ?>">
-    <div class="search-input-group">
-        <input type="text" name="s" placeholder="Search" value="<?php echo get_query_var('s'); ?>" class="form-control" />
-        <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit">Search</button>
-        </span>
+    <div class="form-group has-feedback">
+        <input type="text" name="s" placeholder="Search" class="form-control" />
+        <i class="fa fa-search form-control-feedback"></i>
     </div>
 </form>
 

@@ -94,21 +94,23 @@
                         <!-- header-top-second start -->
                         <!-- ================ -->
                         <div id="header-top-second"  class="clearfix text-right">
-                            <?php
-                            if ( has_nav_menu( 'header-menu' ) ) {
-                                wp_nav_menu( array(
-                                    'container' 		=> '',
-                                    'items_wrap' 		=> '%3$s',
-                                    'theme_location' 	=> 'header-menu',
-                                    'walker'  => new Child_Wrap(),
-                                ) );
-                            } else {
-                                wp_list_pages( array(
-                                    'container' => '',
-                                    'title_li' 	=> '',
-                                ) );
-                            }
-                            ?>
+                            <ul class="list-inline">
+                                <?php
+                                if ( has_nav_menu( 'header-menu' ) ) {
+                                    wp_nav_menu( array(
+                                        'container' 		=> '',
+                                        'items_wrap' 		=> '%3$s',
+                                        'theme_location' 	=> 'header-menu',
+                                        'walker'  => new Child_Wrap(),
+                                    ) );
+                                } else {
+                                    wp_list_pages( array(
+                                        'container' => '',
+                                        'title_li' 	=> '',
+                                    ) );
+                                }
+                                ?>
+                            </ul>
                         </div>
                         <!-- header-top-second end -->
 
@@ -129,7 +131,7 @@
 
                             <!-- logo -->
                             <div id="logo" class="logo">
-                                <a href="#"><img id="logo_img" src="assets/images/logo.png" alt="Moy Materials"></a>
+                                <a href="<?php echo home_url('/'); ?>"><img id="logo_img" src="<?php echo get_template_directory_uri() ;?>/assets/images/Logo.png" alt="Moy Materials"></a>
                             </div>
 
                             <!-- name-and-slogan -->
@@ -158,7 +160,7 @@
 
                                         <!-- logo -->
                                         <div id="logo-mobile" class="logo">
-                                            <a href="#"><img id="logo-img-mobile" src="assets/images/logo.png" alt="Moy Materials"></a>
+                                            <a href="<?php echo home_url('/'); ?>"><img id="logo-img-mobile" src="<?php echo get_template_directory_uri() ;?>/assets/images/Logo.png" alt="Moy Materials"></a>
                                         </div>
 
                                         <!-- name-and-slogan -->
@@ -176,21 +178,23 @@
 
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                         <!-- main-menu -->
-                                        <?php
-                                        if ( has_nav_menu( 'primary-menu' ) ) {
-                                            wp_nav_menu( array(
-                                                'container' 		=> '',
-                                                'items_wrap' 		=> '%3$s',
-                                                'theme_location' 	=> 'primary-menu',
-                                                'walker'  => new Child_Wrap(),
-                                            ) );
-                                        } else {
-                                            wp_list_pages( array(
-                                                'container' => '',
-                                                'title_li' 	=> '',
-                                            ) );
-                                        }
-                                        ?>
+                                        <ul class="navbar-nav ml-xl-auto">
+                                            <?php
+                                            if ( has_nav_menu( 'primary-menu' ) ) {
+                                                wp_nav_menu( array(
+                                                    'container' 		=> '',
+                                                    'items_wrap' 		=> '%3$s',
+                                                    'theme_location' 	=> 'primary-menu',
+                                                    'walker'  => new Child_Wrap(),
+                                                ) );
+                                            } else {
+                                                wp_list_pages( array(
+                                                    'container' => '',
+                                                    'title_li' 	=> '',
+                                                ) );
+                                            }
+                                            ?>
+                                        </ul>
                                         <!-- main-menu end -->
                                     </div>
                                 </nav>
@@ -208,12 +212,10 @@
                                 <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-1">
                                     <li>
-                                        <form role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url('/'); ?>">
-                                            <div class="input-group">
+                                        <form role="search" method="get" id="searchform" class="search-box margin-clear" action="<?php echo home_url('/'); ?>">
+                                            <div class="form-group has-feedback">
                                                 <input type="text" name="s" placeholder="Search" class="form-control" />
-                                                <span class="input-group-btn">
-												<button class="btn btn-primary" type="submit">Search</button>
-											</span>
+                                                <i class="fa fa-search form-control-feedback"></i>
                                             </div>
                                             <!-- <button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button> -->
                                         </form>

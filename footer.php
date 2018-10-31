@@ -75,12 +75,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2"><a href="http://www.bbacerts.co.uk/" target="blank"><img src="assets/images/logos/boa.png" alt=""></a></div>
-                            <div class="col-2"><a href="https://www.fmapprovals.com/" target="blank"><img src="assets/images/logos/fm.png" alt=""></a></div>
-                            <div class="col-2"><a href="http://www.lrwa.org.uk/" target="blank"><img src="assets/images/logos/lrwa.png" alt=""></a></div>
-                            <div class="col-2"><a href="https://www.nfrc.co.uk/" target="blank"><img src="assets/images/logos/nfrc.png" alt=""></a></div>
-                            <div class="col-2"><a href="https://www.thenbs.com/for-manufacturers/services/nbs-plus" target="blank"><img src="assets/images/logos/nbs.png" alt=""></a></div>
-                            <div class="col-2"><a href="https://www.architecture.com/" target="blank"><img src="assets/images/logos/riba.png" alt=""></a></div>
+                            <div class="col-2"><a href="http://www.bbacerts.co.uk/" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/boa.png" alt=""></a></div>
+                            <div class="col-2"><a href="https://www.fmapprovals.com/" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/fm.png" alt=""></a></div>
+                            <div class="col-2"><a href="http://www.lrwa.org.uk/" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/lrwa.png" alt=""></a></div>
+                            <div class="col-2"><a href="https://www.nfrc.co.uk/" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/nfrc.png" alt=""></a></div>
+                            <div class="col-2"><a href="https://www.thenbs.com/for-manufacturers/services/nbs-plus" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/nbs.png" alt=""></a></div>
+                            <div class="col-2"><a href="https://www.architecture.com/" target="blank"><img src="<?php echo get_template_directory_uri() ;?>/assets/images/logos/riba.png" alt=""></a></div>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -94,10 +94,10 @@
                             </ul>
                             <h2 class="title">Subscribe</h2>
                             <p>Lorem ipsum dolor sit amet accusamus excepturi sint dicta maxime?</p>
-                            <form>
+                            <form method="post" action="<?php echo get_home_url() ?>?na=s" onsubmit="return newsletter_check(this)">
                                 <div class="margin-clear form-group has-feedback">
                                     <label class="sr-only" for="subscribe">Email address</label>
-                                    <input type="email" class="form-control" id="subscribe" placeholder="Enter email" required="">
+                                    <input type="email" class="form-control" id="email" name="ne" placeholder="Enter email" required="">
                                     <i class="fa fa-envelope form-control-feedback"></i>
                                 </div>
                                 <div class="text-left">

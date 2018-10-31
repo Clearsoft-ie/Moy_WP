@@ -2,3 +2,7 @@
  * Version: 2.1.1
  * File Description: Place here your custom CSS styles
  */
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 28px 15px 27px 15px;
+}

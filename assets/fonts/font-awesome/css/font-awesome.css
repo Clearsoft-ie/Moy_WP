@@ -257,6 +257,7 @@
 }
 .fa-download:before {
   content: "\f019";
+  padding-right: 5px;
 }
 .fa-arrow-circle-o-down:before {
   content: "\f01a";
@@ -516,6 +517,7 @@
 }
 .fa-calendar:before {
   content: "\f073";
+  padding-right: 5px;
 }
 .fa-random:before {
   content: "\f074";
@@ -614,6 +616,7 @@
 }
 .fa-phone:before {
   content: "\f095";
+  padding-right: 5px;
 }
 .fa-square-o:before {
   content: "\f096";

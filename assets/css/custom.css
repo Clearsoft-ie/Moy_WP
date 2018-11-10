@@ -6,3 +6,12 @@
 .navbar-light .navbar-nav .nav-link {
     padding: 28px 15px 27px 15px;
 }
+
+
+#header-top-second ul li a
+{
+    font-family: "Roboto", sans-serif !important;
+    font-size: 12px;
+    font-weight: 300;
+    color: #366682 !important;
+}

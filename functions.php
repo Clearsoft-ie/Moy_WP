@@ -83,6 +83,22 @@ if ( ! function_exists( 'Moy_setup' ) ) {
 	}
 	add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 
+    add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
+    function clear_nav_menu_item_class($classes, $item, $args) {
+        if ( 'primary-menu' === $args->theme_location ) {
+            return array('nav-item');
+        }
+        return $classes;
+    }
+
+    function add_specific_menu_location_atts( $atts, $item, $args ) {
+        if( 'primary-menu' === $args->theme_location ) {
+            $atts['class'] = 'nav-link';
+        }
+        return $atts;
+    }
+    add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+
 } // End if().
 
 

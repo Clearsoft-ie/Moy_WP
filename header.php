@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ;?>/assets/images/favicon.ico">
 
     <!-- Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -63,7 +63,7 @@
 
     <!-- Custom css -->
     <link href="<?php echo get_template_directory_uri() ;?>/assets/css/custom.css" rel="stylesheet">
-
+    <?php wp_head(); ?>
 </head>
 
 <!-- body classes:  -->
@@ -101,7 +101,6 @@
                                         'container' 		=> '',
                                         'items_wrap' 		=> '%3$s',
                                         'theme_location' 	=> 'header-menu',
-                                        'walker'  => new Child_Wrap(),
                                     ) );
                                 } else {
                                     wp_list_pages( array(

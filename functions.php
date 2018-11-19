@@ -86,7 +86,7 @@ if ( ! function_exists( 'Moy_setup' ) ) {
     add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
     function clear_nav_menu_item_class($classes, $item, $args) {
         if ( 'primary-menu' === $args->theme_location ) {
-            return array('nav-item');
+            array_push($classes, "nav-item");
         }
         return $classes;
     }

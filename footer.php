@@ -159,6 +159,7 @@
 <script src="<?php echo get_template_directory_uri() ;?>/assets/js/template.js"></script>
 <!-- Custom Scripts -->
 <script src="<?php echo get_template_directory_uri() ;?>/assets/js/custom.js"></script>
+<script src="<?php echo get_template_directory_uri() ;?>/custom.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

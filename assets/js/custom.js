@@ -10,6 +10,15 @@
 	"use strict";
 
 	$(document).ready(function() {
+
+        $( "li" ).has( "ul.dropdown-menu" ).addClass('dropdown');
+        $("ul.dropdown-menu li a").removeAttr("class");
+        $( "li.dropdown a.nav-link" ).addClass('dropdown-toggle');
+        $( "li.dropdown a.nav-link" ).attr( "data-toggle", "dropdown" );
+        $( "li.dropdown a.nav-link" ).attr( "aria-haspopup", true );
+        $( "li.dropdown a.nav-link" ).attr( "aria-expanded", false );
+
+
 		if (($(".main-navigation.onclick").length>0) && $(window).width() > 991 ){
 			$.notify({
 				// options

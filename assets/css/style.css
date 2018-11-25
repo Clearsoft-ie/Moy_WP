@@ -5809,7 +5809,7 @@ fieldset[disabled] .form-control {
 
 @media (min-width: 1200px) {
   .header .navbar-nav > li {
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
   }
 
   .header .navbar-nav > li:first-child {
@@ -9029,4 +9029,10 @@ h6.media-heading {
 .slick-nav-thumb {
   margin: 0 5px;
   cursor: pointer;
+}
+
+@media (min-width: 975px) {
+  li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+  }
 }

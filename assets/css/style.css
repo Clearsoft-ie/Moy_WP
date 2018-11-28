@@ -269,6 +269,7 @@ tbody {
 
 .footer-content {
   padding: 20px 0;
+  overflow-wrap: break-word;
 }
 
 .subfooter {
